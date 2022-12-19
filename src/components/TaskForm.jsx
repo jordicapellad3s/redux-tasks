@@ -16,6 +16,7 @@ export default function TaskForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!task.title) return;
     dispatch(
       addTask({
         ...task,

@@ -12,6 +12,8 @@ export default function TaskFormInput({ id, editting, setEditting }) {
   };
 
   const handleSubmit = (e) => {
+    // if input is empty, don't submit
+    if (!task.title) return;
     e.preventDefault();
     dispatch(editTask(task));
     setEditting(false);
