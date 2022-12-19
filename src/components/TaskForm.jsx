@@ -32,7 +32,7 @@ export default function TaskForm() {
     <div className="mt-4">
       <form className="flex gap-2 items-center" onSubmit={handleSubmit}>
         <input
-          className="px-2 py-1 font-mono focus:outline-none focus:ring-0"
+          className="px-2 py-1 font-mono focus:outline-none focus:ring-0 rounded-lg"
           name="title"
           type="text"
           value={task.title}

@@ -3,36 +3,56 @@ import TaskForm from "./components/TaskForm";
 
 function App() {
   return (
-    <div className="p-10 flex justify-between items-start">
+    <div className="p-10 flex flex-col gap-10 items-start">
       <div>
         <h1 className="text-5xl font-bold">Tasks</h1>
         <TaskForm />
         <TaskList />
       </div>
-      <div>
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col justify-start w-auto gap-2 rounded-lg p-5 bg-[#3b3b3b]">
+          <div className="flex gap-2">
+            <div>
+              <img
+                className="w-7 h-7 rounded-full"
+                src="https://jordicapellades.dev/_next/image?url=%2Fimages%2Fselfie-1.jpeg&w=96&q=75"
+              />
+            </div>
+            <div>
+              <h1 className="font-bold">Hola soy Jordi.</h1>
+            </div>
+          </div>
+          <p className="text-sm">
+            Este es un proyecto de ejemplo para aprender Redux Toolkit. El
+            código está disponible en{" "}
+            <a
+              href="https://github.com/jordicapellad3s/redux-tasks"
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              github
+            </a>
+            .
+          </p>
+        </div>
         <a
-          href="https://github.com/jordicapellad3s/redux-tasks"
+          className=""
+          href="https://github.com/jordicapellad3s/"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-1 underline opacity-50 hover:opacity-100 text-sm transition duration-200 ease-in-out"
         >
-          Github
-          <span>
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
+          <div className="flex flex-col justify-start w-auto rounded-lg p-5  bg-blue-400">
+            <div className="flex gap-2 items-center">
+              <img
+                className="w-5 h-5"
+                src="https://github.githubassets.com/favicons/favicon-dark.png"
               />
-            </svg>
-          </span>
+              <span className="text-sm">
+                Si te ha gustado. Puedes seguirme en github.
+              </span>
+            </div>
+          </div>
         </a>
       </div>
     </div>
